@@ -1,38 +1,25 @@
-"use client";
+"use client"
+import { signIn, signOut, useSession } from 'next-auth/react'
+import React from 'react'
 
-import { signIn, signOut, useSession } from "next-auth/react";
-import React, { useEffect } from "react";
-import { useRouter } from "next/router";
 
 const Login = () => {
-  const { status } = useSession();
-  const router = useRouter();
-
-  // Use effect to handle redirection when the session status is authenticated
-  useEffect(() => {
-    if (status === "authenticated") {
-      // Redirect to the "/qc" route
-      router.push("/qc");
+    const session =useSession();
+    console.log(session);
+    if(session.status ==="loading"){
+        return <p>Loading....</p>
     }
-  }, [status, router]);
-
-  if (status === "loading") {
-    return <p>Loading....</p>;
-  }
-
-  if (status === "authenticated") {
-    return <button onClick={() => signOut("google")}>Logout</button>;
-  }
-
-  if (status === "unauthenticated") {
-    return <p>User unauthenticated</p>;
-  }
-
+    if(session.status ==="authenticated"){
+        return  <button onClick={()=>signOut("google")}>Logout</button>
+    }
+    if(session.status ==="unauthenticated"){
+        return <p>user un  authenticated</p>
+    }
   return (
     <div>
-      <button onClick={() => signIn("google")}>Login with Google</button>
+        <button onClick={()=>signIn("google")}>Login with google</button>
     </div>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login
