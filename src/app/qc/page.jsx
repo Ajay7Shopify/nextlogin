@@ -139,7 +139,7 @@ const QualityControlForm = () => {
                             </tr>
                             <tr>
                                 <td className="px-4 py-2 border">2</td>
-                                <td className="px-4 py-2 border">The materials of the item are all according to the client's approved specifications.</td>
+                                <td className="px-4 py-2 border">The materials of the item are all according to the client&apos;s approved specifications.</td>
                                 <td><DropdownRadio  na= {"N/A"} option1={"Pass"} option2={"Fail"} /> </td>
                             </tr>
                             <tr>
@@ -169,7 +169,7 @@ const QualityControlForm = () => {
                             </tr>
                             <tr>
                                 <td className="px-4 py-2 border">8</td>
-                                <td className="px-4 py-2 border">The format and statement content of the Warning, Cautionary, and Regulatory labels are as per the client's approval?</td>
+                                <td className="px-4 py-2 border">The format and statement content of the Warning, Cautionary, and Regulatory labels are as per the client&apos;s approval?</td>
                                 <td><DropdownRadio  na= {"N/A"} option1={"Pass"} option2={"Fail"} /> </td>
                             </tr>
                             <tr>
@@ -225,7 +225,7 @@ const QualityControlForm = () => {
                         </tr>
                         <tr>
                         <td className="px-4 py-2 border w-[10px] sm:w-[20px] md:w-[30px] lg:w-[40px]">4</td>
-                            <td className="px-4 py-2 border">Verbiage and format of the AI; as per the client's approved version?</td>
+                            <td className="px-4 py-2 border">Verbiage and format of the AI; as per the client&apos;s approved version?</td>
                             <td><DropdownRadio  na= {"N/A"} option1={"Pass"} option2={"Fail"} /> </td>
                         </tr>
                         <tr>
@@ -374,7 +374,7 @@ const QualityControlForm = () => {
                         </tr>
                         <tr>
                         <td className="px-2 py-2 border">4</td>
-                            <td className="px-4 py-2 border">Polybag as per the client's standard?</td>
+                            <td className="px-4 py-2 border">Polybag as per the client&apos;s standard?</td>
                             <td><DropdownRadio  na= {"N/A"} option1={"Yes"} option2={"No"} /> </td>
                         </tr>
                         <tr>
