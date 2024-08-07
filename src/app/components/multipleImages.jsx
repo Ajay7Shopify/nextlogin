@@ -1,14 +1,12 @@
 // src/app/components/multipleImages.tsx
 import { useState, useRef } from 'react';
 
-type MultipleImagesProps = {
-    id: string;
-};
 
-const MultipleImages = ({ id }: MultipleImagesProps) => {
-    const [imageSrcs, setImageSrcs] = useState<string[]>([]);
 
-    const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>,index: number) => {
+const MultipleImages = ({ id }) => {
+    const [imageSrcs, setImageSrcs] = useState([]);
+
+    const handleImageUpload = (event,index) => {
         const files = event.target.files;
         console.log("handleImageUpload Files :",files ,"index :",index)
         if (files) {
@@ -17,7 +15,7 @@ const MultipleImages = ({ id }: MultipleImagesProps) => {
         }
     };
 
-    const handleImageReset = (index: number) => {
+    const handleImageReset = (index) => {
         console.log(`handleImageReset for component ${id} at index:`, index);
         setImageSrcs((prevImageSrcs) => prevImageSrcs.filter((_, i) => i !== index));
     };
